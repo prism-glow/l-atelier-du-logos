@@ -1,0 +1,193 @@
+/* --------------------
+   Reset & variables
+-------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #f7f6f3;
+  --text: #1f1f1f;
+  --muted: #6f6f6f;
+  --accent: #2f5d62;
+  --border: #dcdad5;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* --------------------
+   Layout global
+-------------------- */
+header {
+  border-bottom: 1px solid var(--border);
+  padding: 2.5rem 1rem;
+  background: #fff;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+main {
+  padding: 4rem 1rem;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+  background: #fff;
+}
+
+/* --------------------
+   Hero
+-------------------- */
+.hero {
+  margin-bottom: 5rem;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 650px;
+}
+
+/* --------------------
+   Dernier article
+-------------------- */
+.latest {
+  margin-bottom: 5rem;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.article-preview {
+  background: #fff;
+  border: 1px solid var(--border);
+  padding: 2.5rem;
+}
+
+.article-preview h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.article-preview .meta {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.article-preview p {
+  margin-bottom: 1.5rem;
+}
+
+/* --------------------
+   Accès archives
+-------------------- */
+.archives-link {
+  margin-top: 3rem;
+  display: inline-block;
+  font-weight: 500;
+}
+
+/* --------------------
+   Responsive
+-------------------- */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  nav ul {
+    gap: 1rem;
+  }
+}
+
+article-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.article {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.article:last-child {
+  border-bottom: none;
+}
+
+.article h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  margin-bottom: 0.4rem;
+  transition: color 0.2s ease;
+}
+
+.article .meta {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.article p {
+  max-width: 720px;
+  color: #2b2b2b;
+}
+
+/* Effet subtil au survol */
+.article:hover h3 {
+  color: var(--accent);
+}
